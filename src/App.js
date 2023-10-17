@@ -115,7 +115,6 @@ const requestOptions = {
 
 fetch("https://api.clarifai.com/v2/models/" + MODEL_ID + "/outputs", requestOptions)
     .then(response => response.json())
-    //.then(result => this.displayFaceBox(this.calculateFaceLocation(result)))
     .then(result => {
       if (result) {
         fetch('http://localhost:3000/image', {
